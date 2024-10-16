@@ -47,6 +47,7 @@ function solution(number) {
 console.log(solution());
 
 /*
+Kata 3
 A square of squares
 You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
 
@@ -78,3 +79,48 @@ var isSquare = function (n) {
 };
 
 console.log(isSquare(26));
+
+/*
+Kata 4
+Convert a Number to a String!
+We need a function that can transform a number (integer) into a string.
+
+What ways of achieving this do you know?
+
+Examples (input --> output):
+123  --> "123"
+999  --> "999"
+-100 --> "-100"
+
+
+https://www.codewars.com/kata/5265326f5fda8eb1160004c8/
+*/
+
+function numberToString(num) {
+  return String(num);
+}
+
+/*
+Kata 5
+Vowel Count
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+https://www.codewars.com/kata/54ff3102c1bad923760001f3/
+*/
+
+function getCount(str) {
+  let count = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  const charArray = str.split("");
+
+  for (let i = 0; i < charArray.length; i++) {
+    if (vowels.includes(charArray[i])) {
+      count++;
+    }
+  }
+  return count;
+}
