@@ -93,7 +93,7 @@ Examples (input --> output):
 -100 --> "-100"
 
 
-https://www.codewars.com/kata/5265326f5fda8eb1160004c8/
+Url: https://www.codewars.com/kata/5265326f5fda8eb1160004c8/
 */
 
 function numberToString(num) {
@@ -104,12 +104,10 @@ function numberToString(num) {
 Kata 5
 Vowel Count
 Return the number (count) of vowels in the given string.
-
 We will consider a, e, i, o, u as vowels for this Kata (but not y).
-
 The input string will only consist of lower case letters and/or spaces.
 
-https://www.codewars.com/kata/54ff3102c1bad923760001f3/
+Url: https://www.codewars.com/kata/54ff3102c1bad923760001f3/
 */
 
 function getCount(str) {
@@ -123,4 +121,27 @@ function getCount(str) {
     }
   }
   return count;
+}
+
+/*
+Kata 6
+
+Get the Middle Character
+You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+#Examples:
+Kata.getMiddle("test") should return "es"
+Kata.getMiddle("testing") should return "t"
+Kata.getMiddle("middle") should return "dd"
+Kata.getMiddle("A") should return "A"
+
+Url: https://www.codewars.com/kata/56747fd5cb988479af000028/
+*/
+
+function getMiddle(s) {
+  const charArray = s.split("");
+  let num = Math.trunc(charArray.length / 2);
+  return charArray.length % 2 === 0
+    ? `${charArray[num - 1]}${charArray[num]}`
+    : charArray[num];
 }
