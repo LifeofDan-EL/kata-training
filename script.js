@@ -1,5 +1,6 @@
 /*
 Kata 1
+
 Description
 We need a function that can transform a string into a number. What ways of achieving this do you know?
 
@@ -13,6 +14,7 @@ const stringToNumber = function (str) {
 
 /*
 Kata 2
+
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
 Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
@@ -44,11 +46,10 @@ function solution(number) {
   return sum;
 }
 
-console.log(solution());
-
 /*
 Kata 3
 A square of squares
+
 You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
 
 However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
@@ -78,11 +79,10 @@ var isSquare = function (n) {
   } else return false;
 };
 
-console.log(isSquare(26));
-
 /*
 Kata 4
 Convert a Number to a String!
+
 We need a function that can transform a number (integer) into a string.
 
 What ways of achieving this do you know?
@@ -103,6 +103,7 @@ function numberToString(num) {
 /*
 Kata 5
 Vowel Count
+
 Return the number (count) of vowels in the given string.
 We will consider a, e, i, o, u as vowels for this Kata (but not y).
 The input string will only consist of lower case letters and/or spaces.
@@ -125,8 +126,8 @@ function getCount(str) {
 
 /*
 Kata 6
-
 Get the Middle Character
+
 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
 #Examples:
@@ -148,8 +149,8 @@ function getMiddle(s) {
 
 /*
 Kata 7
-
 Find the divisors!
+
 Create a function named divisors/Divisors that takes an integer n > 1 and returns an array with all of the integer's divisors(except for 1 and the number itself), from smallest to largest. If the number is prime return the string '(integer) is prime' (null in C#, empty table in COBOL) (use Either String a in Haskell and Result<Vec<u32>, String> in Rust).
 
 Examples:
@@ -172,3 +173,26 @@ function divisors(integer) {
 
   return arr.length === 0 ? `${integer} is prime` : arr;
 }
+
+/*
+Kata 8
+Reversed Strings
+
+Complete the solution so that it reverses the string passed into it.
+
+'world'  =>  'dlrow'
+'word'   =>  'drow'
+
+Url: https://www.codewars.com/kata/5168bb5dfe9a00b126000018/
+*/
+
+function solution(str) {
+  str.split("");
+  newStr = [];
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr.push(str[i]);
+  }
+  return newStr.join("");
+}
+
+console.log(solution("word"));
