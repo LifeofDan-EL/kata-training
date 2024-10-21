@@ -195,8 +195,6 @@ function solution(str) {
   return newStr.join("");
 }
 
-console.log(solution("word"));
-
 /*
 Kata 9
 Count of positives / sum of negatives
@@ -214,22 +212,37 @@ Url: https://www.codewars.com/kata/576bb71bbbcf0951d5000044
 */
 
 function countPositivesSumNegatives(input) {
-  positiveNum = [];
-  negativeNum = [];
-  let negativeSum = 0;
+  let positiveNum = 0,
+    negativeSum = 0;
 
-  if (input.length < 1 || input === null) {
+  if (!Array.isArray(input) || input.length < 1) {
     return [];
   } else {
     for (let i = 0; i < input.length; i++) {
-      input[i] > 0 ? positiveNum.push(input[i]) : negativeNum.push(input[i]);
+      input[i] > 0 ? positiveNum++ : (negativeSum += input[i]);
     }
-
-    for (let i = 0; i < negativeNum.length; i++) {
-      negativeSum = negativeSum + negativeNum[i];
-    }
-    return [positiveNum.length, negativeSum];
+    return [positiveNum, negativeSum];
   }
 }
 
-countPositivesSumNegatives([10, 6, -11]);
+/*
+Kata 10
+Keep Hydrated!
+
+Nathan loves cycling.
+
+Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+
+You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+For example:
+time = 3 ----> litres = 1
+time = 6.7---> litres = 3
+time = 11.8--> litres = 5
+
+Url: https://www.codewars.com/kata/582cb0224e56e068d800003c/train/
+*/
+
+function litres(time) {
+  return Math.trunc(0.5 * time);
+}
