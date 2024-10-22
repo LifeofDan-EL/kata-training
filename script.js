@@ -240,9 +240,51 @@ time = 3 ----> litres = 1
 time = 6.7---> litres = 3
 time = 11.8--> litres = 5
 
-Url: https://www.codewars.com/kata/582cb0224e56e068d800003c/train/
+Url: https://www.codewars.com/kata/582cb0224e56e068d800003c
 */
 
 function litres(time) {
   return Math.trunc(0.5 * time);
 }
+
+/*
+Kata 11
+Convert boolean values to strings 'Yes' or 'No'.
+
+Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+Url: https://www.codewars.com/kata/53369039d7ab3ac506000467
+*/
+
+function boolToWord(bool) {
+  return bool ? "Yes" : "No";
+}
+
+/*
+Kata 12
+Friend or Foe?
+
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+Input = {"Ryan", "Kieran", "Jason", "Yous"}
+Output = {"Ryan", "Yous"}
+
+Input = {"Peter", "Stephen", "Joe"}
+Output = {}
+
+Url: https://www.codewars.com/kata/55b42574ff091733d900002f/
+*/
+
+function friend(friends) {
+  newArray = [];
+  friendArray = [];
+  for (let i = 0; i < friends.length; i++) {
+    newArray[i] = friends[i].split("");
+    if (newArray[i].length === 4) friendArray.push(newArray[i].join(""));
+  }
+  return friendArray;
+}
+
+console.log(friend(["Peter", "Stephen", "Joe"]));
