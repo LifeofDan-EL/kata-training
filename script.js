@@ -274,17 +274,57 @@ Output = {"Ryan", "Yous"}
 Input = {"Peter", "Stephen", "Joe"}
 Output = {}
 
-Url: https://www.codewars.com/kata/55b42574ff091733d900002f/
+Url: https://www.codewars.com/kata/55b42574ff091733d900002f
 */
 
 function friend(friends) {
-  newArray = [];
   friendArray = [];
   for (let i = 0; i < friends.length; i++) {
-    newArray[i] = friends[i].split("");
-    if (newArray[i].length === 4) friendArray.push(newArray[i].join(""));
+    if (friends[i].length === 4) friendArray.push(friends[i]);
   }
   return friendArray;
 }
 
-console.log(friend(["Peter", "Stephen", "Joe"]));
+/*
+Kata 13
+Remove First and Last Character
+
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry about strings with less than two characters.
+
+
+Url: https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
+*/
+
+function removeChar(str) {
+  charArray = str.split("");
+  charArray.pop();
+  charArray.shift();
+  return charArray;
+}
+
+/*
+Kata 14
+Ones and Zeros
+
+Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+Examples:
+
+Testing: [0, 0, 0, 1] ==> 1
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 0, 1] ==> 5
+Testing: [1, 0, 0, 1] ==> 9
+Testing: [0, 0, 1, 0] ==> 2
+Testing: [0, 1, 1, 0] ==> 6
+Testing: [1, 1, 1, 1] ==> 15
+Testing: [1, 0, 1, 1] ==> 11
+However, the arrays can have varying lengths, not just limited to 4.
+
+Url: https://www.codewars.com/kata/578553c3a1b8d5c40300037c
+*/
+
+const binaryArrayToNumber = (arr) => {
+  return parseInt(arr.join(""), 2);
+};
