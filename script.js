@@ -328,3 +328,45 @@ Url: https://www.codewars.com/kata/578553c3a1b8d5c40300037c
 const binaryArrayToNumber = (arr) => {
   return parseInt(arr.join(""), 2);
 };
+
+/*
+Kata 15
+Calculate average
+
+Write a function which calculates the average of the numbers in a given list.
+
+Note: Empty arrays should return 0.
+
+Url: https://www.codewars.com/kata/57a2013acf1fa5bfc4000921
+*/
+
+function findAverage(array) {
+  sum = 0;
+  if (array.length < 1) {
+    return 0;
+  } else {
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum / array.length;
+  }
+}
+
+/*
+Kata 16
+Square(n) Sum
+
+Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+For example, for [1, 2, 2] it should return 9 because 1*1 + 2*2 + 2*2 = 9
+
+Url: https://www.codewars.com/kata/515e271a311df0350d00000f/
+*/
+
+function squareSum(numbers) {
+  sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i] * numbers[i];
+  }
+  return sum;
+}
