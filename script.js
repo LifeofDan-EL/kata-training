@@ -113,8 +113,8 @@ Url: https://www.codewars.com/kata/54ff3102c1bad923760001f3/
 
 function getCount(str) {
   let count = 0;
-  const vowels = ["a", "e", "i", "o", "u"];
-  const charArray = str.split("");
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const charArray = str.split('');
 
   for (let i = 0; i < charArray.length; i++) {
     if (vowels.includes(charArray[i])) {
@@ -140,7 +140,7 @@ Url: https://www.codewars.com/kata/56747fd5cb988479af000028/
 */
 
 function getMiddle(s) {
-  const charArray = s.split("");
+  const charArray = s.split('');
   let num = Math.trunc(charArray.length / 2);
   return charArray.length % 2 === 0
     ? `${charArray[num - 1]}${charArray[num]}`
@@ -187,12 +187,12 @@ Url: https://www.codewars.com/kata/5168bb5dfe9a00b126000018/
 */
 
 function solution(str) {
-  str.split("");
+  str.split('');
   newStr = [];
   for (let i = str.length - 1; i >= 0; i--) {
     newStr.push(str[i]);
   }
-  return newStr.join("");
+  return newStr.join('');
 }
 
 /*
@@ -257,7 +257,7 @@ Url: https://www.codewars.com/kata/53369039d7ab3ac506000467
 */
 
 function boolToWord(bool) {
-  return bool ? "Yes" : "No";
+  return bool ? 'Yes' : 'No';
 }
 
 /*
@@ -296,7 +296,7 @@ Url: https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
 */
 
 function removeChar(str) {
-  charArray = str.split("");
+  charArray = str.split('');
   charArray.pop();
   charArray.shift();
   return charArray;
@@ -326,7 +326,7 @@ Url: https://www.codewars.com/kata/578553c3a1b8d5c40300037c
 */
 
 const binaryArrayToNumber = (arr) => {
-  return parseInt(arr.join(""), 2);
+  return parseInt(arr.join(''), 2);
 };
 
 /*
@@ -360,7 +360,7 @@ Complete the square sum function so that it squares each number passed into it a
 
 For example, for [1, 2, 2] it should return 9 because 1*1 + 2*2 + 2*2 = 9
 
-Url: https://www.codewars.com/kata/515e271a311df0350d00000f/
+Url: https://www.codewars.com/kata/515e271a311df0350d00000f
 */
 
 function squareSum(numbers) {
@@ -370,3 +370,32 @@ function squareSum(numbers) {
   }
   return sum;
 }
+
+/*
+Kata 17
+Reverse words
+
+Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+Examples
+"This is an example!" ==> "sihT si na !elpmaxe"
+"double  spaces"      ==> "elbuod  secaps"
+
+Url: https://www.codewars.com/kata/5259b20d6021e9e14c0010d4
+*/
+
+function reverseWords(str) {
+  newArray = str.split(' ');
+  arrayHolder = [];
+  for (let i = 0; i < newArray.length; i++) {
+    test2 = newArray[i].split('');
+    for (let k = test2.length - 1; k >= 0; k--) {
+      arrayHolder.push(test2[k]);
+    }
+    arrayHolder.push(' ');
+  }
+  arrayHolder.pop();
+  return arrayHolder.join('');
+}
+
+console.log(reverseWords('This is an example!'));
