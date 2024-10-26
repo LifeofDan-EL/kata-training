@@ -113,8 +113,8 @@ Url: https://www.codewars.com/kata/54ff3102c1bad923760001f3/
 
 function getCount(str) {
   let count = 0;
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  const charArray = str.split('');
+  const vowels = ["a", "e", "i", "o", "u"];
+  const charArray = str.split("");
 
   for (let i = 0; i < charArray.length; i++) {
     if (vowels.includes(charArray[i])) {
@@ -140,7 +140,7 @@ Url: https://www.codewars.com/kata/56747fd5cb988479af000028/
 */
 
 function getMiddle(s) {
-  const charArray = s.split('');
+  const charArray = s.split("");
   let num = Math.trunc(charArray.length / 2);
   return charArray.length % 2 === 0
     ? `${charArray[num - 1]}${charArray[num]}`
@@ -187,12 +187,12 @@ Url: https://www.codewars.com/kata/5168bb5dfe9a00b126000018/
 */
 
 function solution(str) {
-  str.split('');
+  str.split("");
   newStr = [];
   for (let i = str.length - 1; i >= 0; i--) {
     newStr.push(str[i]);
   }
-  return newStr.join('');
+  return newStr.join("");
 }
 
 /*
@@ -257,7 +257,7 @@ Url: https://www.codewars.com/kata/53369039d7ab3ac506000467
 */
 
 function boolToWord(bool) {
-  return bool ? 'Yes' : 'No';
+  return bool ? "Yes" : "No";
 }
 
 /*
@@ -296,7 +296,7 @@ Url: https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
 */
 
 function removeChar(str) {
-  charArray = str.split('');
+  charArray = str.split("");
   charArray.pop();
   charArray.shift();
   return charArray;
@@ -326,7 +326,7 @@ Url: https://www.codewars.com/kata/578553c3a1b8d5c40300037c
 */
 
 const binaryArrayToNumber = (arr) => {
-  return parseInt(arr.join(''), 2);
+  return parseInt(arr.join(""), 2);
 };
 
 /*
@@ -385,17 +385,94 @@ Url: https://www.codewars.com/kata/5259b20d6021e9e14c0010d4
 */
 
 function reverseWords(str) {
-  newArray = str.split(' ');
+  newArray = str.split(" ");
   arrayHolder = [];
   for (let i = 0; i < newArray.length; i++) {
-    test2 = newArray[i].split('');
+    test2 = newArray[i].split("");
     for (let k = test2.length - 1; k >= 0; k--) {
       arrayHolder.push(test2[k]);
     }
-    arrayHolder.push(' ');
+    arrayHolder.push(" ");
   }
   arrayHolder.pop();
-  return arrayHolder.join('');
+  return arrayHolder.join("");
 }
 
-console.log(reverseWords('This is an example!'));
+/*
+Kata 18
+Sum Arrays
+
+Description:
+Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+
+Examples
+Input: [1, 5.2, 4, 0, -1]
+Output: 9.2
+
+Input: []
+Output: 0
+
+Input: [-2.398]
+Output: -2.398
+
+Assumptions
+You can assume that you are only given numbers.
+You cannot assume the size of the array.
+You can assume that you do get an array and if the array is empty, return 0"
+
+Url: https://www.codewars.com/kata/53dc54212259ed3d4f00071c
+*/
+
+// Sum Numbers
+function sum(numbers) {
+  count = 0;
+  if (!numbers) {
+    return 0;
+  } else {
+    for (let i = 0; i < numbers.length; i++) {
+      count += numbers[i];
+    }
+    return count;
+  }
+}
+
+/*
+Kata 19
+Function 1 - hello world
+
+Make a simple function called greet that returns the most-famous "hello world!".
+
+Style Points
+Sure, this is about as easy as it gets. But how clever can you be to create the most creative "hello world" you can think of? What is a "hello world" solution you would want to show your friends?
+
+Url: https://www.codewars.com/kata/523b4ff7adca849afe000035
+*/
+
+const greet = () => {
+  return "hello world!";
+};
+
+/*
+Kata 20
+List Filtering
+
+Description:
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+Example
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+Url: https://www.codewars.com/kata/53dbd5315a3c69eed20002dd
+*/
+
+function filter_list(l) {
+  newChar = [];
+  for (let i = 0; i < l.length; i++) {
+    if (typeof l[i] !== "string") {
+      newChar.push(l[i]);
+    }
+  }
+  return newChar;
+}
