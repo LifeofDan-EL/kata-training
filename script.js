@@ -510,31 +510,30 @@ function countSheeps(sheep) {
   }
 }
 
-console.log(
-  countSheeps([
-    true,
-    true,
-    true,
-    false,
-    true,
-    true,
-    true,
-    true,
-    true,
-    false,
-    true,
-    false,
-    true,
-    false,
-    false,
-    true,
-    true,
-    true,
-    true,
-    true,
-    false,
-    false,
-    true,
-    true,
-  ])
-);
+/*
+Kata 22
+How good are you really?
+
+There was a test in your class and you passed it. Congratulations!
+But you're an ambitious person. You want to know if you're better than the average student in your class.
+You receive an array with your peers' test scores. Now calculate the average and compare your score!
+Return true if you're better, else false!
+
+Note:
+Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
+
+
+Url: https://www.codewars.com/kata/5601409514fc93442500010b/
+*/
+
+function betterThanAverage(classPoints, yourPoints) {
+  average = 0;
+  for (const points of classPoints) {
+    average += points;
+  }
+  average /= classPoints.length;
+  console.log(average);
+  return yourPoints > average ? true : false;
+}
+
+console.log(betterThanAverage([2, 4, 5], 5));
