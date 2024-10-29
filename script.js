@@ -536,4 +536,28 @@ function betterThanAverage(classPoints, yourPoints) {
   return yourPoints > average ? true : false;
 }
 
-console.log(betterThanAverage([2, 4, 5], 5));
+/*
+Kata 21
+Are You Playing Banjo?
+
+Description:
+Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:
+
+name + " plays banjo" 
+name + " does not play banjo"
+Names given are always valid strings.
+
+Url: https://www.codewars.com/kata/53af2b8861023f1d88000832/
+*/
+
+function areYouPlayingBanjo(name) {
+  charArray = name.split("");
+  return charArray[0] === "R" || charArray[0] === "r"
+    ? `${name} plays banjo`
+    : `${name} does not plays banjo`;
+}
+
+console.log(areYouPlayingBanjo("Adam"));
