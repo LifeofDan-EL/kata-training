@@ -564,23 +564,66 @@ console.log(areYouPlayingBanjo("Adam"));
 
 /*
 Kata 22
-Are You Playing Banjo?
+Binary Addition
+
 
 Description:
-Create a function which answers the question "Are you playing banjo?".
-If your name starts with the letter "R" or lower case "r", you are playing banjo!
+Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
 
-The function takes a name as its only argument, and returns one of the following strings:
+The binary number returned should be a string.
 
-name + " plays banjo" 
-name + " does not play banjo"
-Names given are always valid strings.
+Examples:(Input1, Input2 --> Output (explanation)))
 
-Url: https://www.codewars.com/kata/53af2b8861023f1d88000832/
+1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+
+Url: https://www.codewars.com/kata/551f37452ff852b7bd000139
 */
 
 function addBinary(a, b) {
   return (a + b).toString(2);
 }
 
-console.log(addBinary(5, 9));
+/*
+Kata 23
+Categorize New Member
+
+
+Description:
+The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+Input
+Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+Output
+Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+Example
+input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+Url: https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa
+*/
+
+function openOrSenior(data) {
+  const output = [];
+  for (const [i, n] of data) {
+    console.log(i, n);
+    if (i >= 55 && n > 7) output.push("Senior");
+    else output.push("Open");
+  }
+  return output;
+}
+
+console.log(
+  openOrSenior([
+    [18, 20],
+    [45, 2],
+    [61, 12],
+    [37, 6],
+    [21, 21],
+    [78, 9],
+  ])
+);
