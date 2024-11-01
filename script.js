@@ -560,8 +560,6 @@ function areYouPlayingBanjo(name) {
     : `${name} does not plays banjo`;
 }
 
-console.log(areYouPlayingBanjo("Adam"));
-
 /*
 Kata 22
 Binary Addition
@@ -587,7 +585,6 @@ function addBinary(a, b) {
 /*
 Kata 23
 Categorize New Member
-
 
 Description:
 The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
@@ -617,13 +614,20 @@ function openOrSenior(data) {
   return output;
 }
 
-console.log(
-  openOrSenior([
-    [18, 20],
-    [45, 2],
-    [61, 12],
-    [37, 6],
-    [21, 21],
-    [78, 9],
-  ])
-);
+/*
+Kata 24
+Opposites Attract
+
+Description:
+Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+Url: https://www.codewars.com/kata/555086d53eac039a2a000083
+*/
+
+function lovefunc(flower1, flower2) {
+  return flower1 % 2 !== flower2 % 2;
+}
+
+console.log(lovefunc((1, 4)));
