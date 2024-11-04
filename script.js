@@ -685,4 +685,50 @@ function oddOrEven(array) {
   return sum % 2 === 0 ? "even" : "odd";
 }
 
-console.log(oddOrEven([1023, 1, 2]));
+/*
+Kata 27
+Find the smallest integer in the array
+
+Description:
+Given an array of integers your solution should find the smallest integer.
+
+For example:
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+
+You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+Url: https://www.codewars.com/kata/55a2d7ebe362935a210000b2/
+*/
+function findSmallestInt(arr) {
+  let smallest = arr[0];
+  for (const number of arr) {
+    if (smallest > number) smallest = number;
+  }
+  return smallest;
+}
+
+console.log(findSmallestInt([78, 56, 232, 12, 8]));
+
+/*
+Kata 28
+Beginner - Reduce but Grow
+
+Description:
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+
+Url: https://www.codewars.com/kata/55a2d7ebe362935a210000b2/
+*/
+
+function grow(x) {
+  let value = 1;
+  for (const number of x) {
+    value = value * number;
+  }
+  return value;
+}
+
+console.log(grow([4, 1, 1, 1, 4]));
