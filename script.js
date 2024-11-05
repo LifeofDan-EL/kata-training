@@ -708,8 +708,6 @@ function findSmallestInt(arr) {
   return smallest;
 }
 
-console.log(findSmallestInt([78, 56, 232, 12, 8]));
-
 /*
 Kata 28
 Beginner - Reduce but Grow
@@ -719,8 +717,7 @@ Given a non-empty array of integers, return the result of multiplying the values
 
 [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
-
-Url: https://www.codewars.com/kata/55a2d7ebe362935a210000b2/
+Url: https://www.codewars.com/kata/57f780909f7e8e3183000078
 */
 
 function grow(x) {
@@ -731,4 +728,37 @@ function grow(x) {
   return value;
 }
 
-console.log(grow([4, 1, 1, 1, 4]));
+/*
+Kata 29
+Disemvowel Trolls
+
+Description:
+Trolls are attacking your comment section!
+
+A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+Note: for this kata y isn't considered a vowel.
+
+Url: https://www.codewars.com/kata/52fba66badcd10859f00097e
+*/
+
+function disemvowel(str) {
+  const firstArr = [];
+  const vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+  const test = str.split(" ");
+
+  for (const l of test) {
+    firstArr.push(
+      l
+        .split("")
+        .filter((cur) => (!vowels.includes(cur) ? cur : ""))
+        .join("")
+    );
+  }
+  return firstArr.join(" ");
+}
+
+console.log(disemvowel("This website is for losers LOL"));
