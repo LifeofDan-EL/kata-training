@@ -829,4 +829,44 @@ function solution(str, ending) {
   return test === ending ? true : false;
 }
 
-console.log(solution("abcde", "abc"));
+/*
+Kata 33
+Convert number to reversed array of digits
+
+Description:
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+Example(Input => Output):
+35231 => [1,3,2,5,3]
+0 => [0]
+
+
+Url: https://www.codewars.com/kata/5583090cbe83f4fd8c000051
+*/
+
+function digitize(n) {
+  return n.toString().split("").map(Number).reverse();
+}
+
+console.log(digitize(35231));
+
+/*
+Kata 34
+Remove String Spaces
+
+Description:
+Write a function that removes the spaces from the string, then return the resultant string.
+
+Examples (Input -> Output):
+
+"8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB"
+"8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
+"8aaaaa dddd r     " -> "8aaaaaddddr"
+
+Url: https://www.codewars.com/kata/57eae20f5500ad98e50002c5/
+*/
+function noSpace(x) {
+  return x.replaceAll(" ", "");
+}
+
+console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
