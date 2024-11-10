@@ -848,8 +848,6 @@ function digitize(n) {
   return n.toString().split("").map(Number).reverse();
 }
 
-console.log(digitize(35231));
-
 /*
 Kata 34
 Remove String Spaces
@@ -869,4 +867,61 @@ function noSpace(x) {
   return x.replaceAll(" ", "");
 }
 
-console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+/*
+Kata 35
+Highest and Lowest
+
+Description:
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Examples
+highAndLow("1 2 3 4 5"); // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+Notes
+All numbers are valid Int32, no need to validate them.
+There will always be at least one number in the input string.
+Output string must be two numbers separated by a single space, and highest number is first.
+
+Url: https://www.codewars.com/kata/554b4ac871d6813a03000035/
+*/
+
+function highAndLow(numbers) {
+  const test = numbers
+    .split(" ")
+    .map(Number)
+    .sort((a, b) => b - a);
+
+  return `${test[0]} ${test[test.length - 1]}`;
+}
+
+highAndLow("1 2 -3 4 5");
+
+/*
+Kata 36
+The highest profit wins!
+
+Description:
+Story
+Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+
+Task
+Write a function that returns both the minimum and maximum number of the given list/array.
+
+Examples (Input --> Output)
+[1,2,3,4,5] --> [1,5]
+[2334454,5] --> [5,2334454]
+[1]         --> [1,1]
+
+Remarks
+All arrays or lists will always have at least one element, so you don't need to check the length. Also, your function will always get an array or a list, you don't have to check for null, undefined or similar.
+
+Url: https://www.codewars.com/kata/554b4ac871d6813a03000035/
+*/
+
+function minMax(arr) {
+  return [Math.min(...arr), Math.max(...arr)];
+}
+
+console.log(minMax([1, 2, 3, 4, 5]));
