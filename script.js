@@ -968,4 +968,19 @@ function twoOldestAges(ages) {
   return [num[1], num[0]];
 }
 
-console.log(twoOldestAges([1, 5, 87, 45, 8, 8]));
+function bubblesortOnce(a) {
+  let result = [...a];
+  let pass;
+  for (let i = 0; i < result.length - 1; i++) {
+    console.log(i, result[i], result[i + 1]);
+    if (result[i] > result[i + 1]) {
+      pass = result[i + 1];
+      result[i + 1] = result[i];
+      result[i] = pass;
+      console.log(i, result[i], result[i + 1]);
+    }
+  }
+  return result;
+}
+
+console.log(bubblesortOnce([9, 7, 5, 3, 1, 2, 4, 6, 8]));
