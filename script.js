@@ -1385,4 +1385,35 @@ function century(year) {
   return Math.ceil(year / 100);
 }
 
-console.log(century(1705));
+/*
+Kata 53
+Exes and Ohs
+
+Description:
+Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+Examples input/output:
+
+XO("ooxx") => true
+XO("xooxx") => false
+XO("ooxXm") => true
+XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+XO("zzoo") => false
+
+Url: https://www.codewars.com/kata/55908aad6620c066bc00002a/
+*/
+
+function XO(str) {
+  const test = str.toLowerCase().split("");
+  let xCount = 0;
+  let oCount = 0;
+
+  for (let e of test) {
+    if (e === "x") xCount++;
+    else if (e === "o") oCount++;
+  }
+
+  return xCount === oCount ? true : false;
+}
+
+console.log(XO("Xo"));
