@@ -1440,4 +1440,16 @@ function sortByLength(array) {
   return array.sort((a, b) => a.length - b.length);
 }
 
-console.log(sortByLength(["Beg", "Life", "I", "To"]));
+0.04285714285;
+
+function calculateYears(principal, interest, tax, desired) {
+  let y = 0;
+  while (desired > principal) {
+    interestAmount = principal * interest;
+    taxableSum = interestAmount * tax;
+    principal = principal + (interestAmount - taxableSum);
+    y++;
+  }
+  return y;
+}
+console.log(calculateYears(1000, 0.05, 0.18, 1100));
