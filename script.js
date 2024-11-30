@@ -1483,4 +1483,41 @@ function calculateYears(principal, interest, tax, desired) {
   }
   return y;
 }
-console.log(calculateYears(1000, 0.05, 0.18, 1100));
+
+/*
+Kata 56
+Count the Digit
+
+Description:
+Count the numbers of digits d used in the writing of all the k**2.
+
+Implement the function taking n and d as parameters and returning this count.
+
+Examples:
+n = 10, d = 1 
+the k*k are 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
+We are using the digit 1 in: 1, 16, 81, 100. The total count is then 4.
+
+The function, when given n = 25 and d = 1 as argument, should return 11 since
+the k*k that contain the digit 1 are:
+1, 16, 81, 100, 121, 144, 169, 196, 361, 441.
+So there are 11 digits 1 for the squares of numbers between 0 and 25.
+
+Url: https://www.codewars.com/kata/566fc12495810954b1000030/
+*/
+
+function nbDig(n, d) {
+  let testArr = [];
+  let count = 0;
+  for (let i = 0; i <= n; i++) {
+    testArr.push(String(i * i).split(""));
+  }
+
+  for (let num of testArr.flat()) {
+    if (Number(num) === d) count++;
+  }
+
+  return count;
+}
+
+console.log(nbDig(10, 1));
