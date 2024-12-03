@@ -1551,8 +1551,6 @@ In this simple exercise, you will build a program that takes a value, integer , 
 
 For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
 
-
-
 Url: https://www.codewars.com/kata/58ca658cc0d6401f2700045f
 */
 
@@ -1564,4 +1562,22 @@ function findMultiples(integer, limit) {
   return numArr;
 }
 
-console.log(findMultiples(5, 25));
+/*
+Kata 59
+Parse nice int from char problem
+
+Description:
+You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+Write a program that returns the girl's age (0-9) as an integer.
+
+Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+
+
+Url: https://www.codewars.com/kata/58ca658cc0d6401f2700045f
+*/
+function getAge(inputString) {
+  return Number(inputString.split("")[0]);
+}
+
+console.log(getAge("4 years old"));
