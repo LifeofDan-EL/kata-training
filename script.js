@@ -1628,4 +1628,23 @@ function findUniq(arr) {
   return test[0] !== test[1] ? test[0] : test[test.length - 1];
 }
 
-console.log(findUniq([1, 0, 0]));
+/*
+Kata 62
+Reverse List Order
+
+Description:
+Output
+In this kata you will create a function that takes in a list and returns a list with the reverse order.
+
+Examples (Input -> Output)
+* [1, 2, 3, 4]  -> [4, 3, 2, 1]
+* [9, 2, 0, 7]  -> [7, 0, 2, 9]
+
+Url: https://www.codewars.com/kata/53da6d8d112bd1a0dc00008b/
+*/
+
+function reverseList(list) {
+  return list.reverse();
+}
+
+console.log(reverseList([1, 2, 3, 4]));
