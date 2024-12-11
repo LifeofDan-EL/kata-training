@@ -1649,7 +1649,6 @@ function reverseList(list) {
 
 /*
 Kata 63
-
 Transportation on vacation
 
 Description:
@@ -1671,7 +1670,6 @@ function rentalCarCost(d) {
 
 /*
 Kata 64
-
 Sum The Strings
 
 Description:
@@ -1699,7 +1697,6 @@ function sumStr(a, b) {
 
 /*
 Kata 65
-
 Sort Numbers
 
 Description:
@@ -1714,4 +1711,22 @@ Url: https://www.codewars.com/kata/5174a4c0f2769dd8b1000003/
 function solution(nums) {
   return nums !== null ? nums.sort((a, b) => a - b) : [];
 }
-console.log(solution([1, 2, 3, 10, 5]));
+
+/*
+Kata 66
+Sum of two lowest positive integers
+
+Description:
+Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+Url: https://www.codewars.com/kata/558fc85d8fd1938afb000014/
+*/
+function sumTwoSmallestNumbers(numbers) {
+  const test = numbers.sort((a, b) => a - b);
+  return test[0] + test[1];
+}
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
