@@ -1748,4 +1748,21 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return mpg * fuelLeft >= distanceToPump;
 };
 
-console.log(zeroFuel(50, 25, 2));
+/*
+Kata 68
+Beginner - Lost Without a Map
+
+Description:
+Given an array of integers, return a new array with each value doubled.
+
+For example:
+[1, 2, 3] --> [2, 4, 6]
+
+Url: https://www.codewars.com/kata/57f781872e3d8ca2a000007e
+*/
+
+function maps(x) {
+  return x.map((a) => a * 2);
+}
+
+console.log(maps([1, 2, 3]));
