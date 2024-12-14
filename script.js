@@ -1765,4 +1765,23 @@ function maps(x) {
   return x.map((a) => a * 2);
 }
 
-console.log(maps([1, 2, 3]));
+/*
+Kata 69
+5 without numbers !!
+
+Description:
+Write a function that always returns 5
+
+Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+Good luck :)
+
+Url: https://www.codewars.com/kata/59441520102eaa25260000bf/
+*/
+
+function unusualFive() {
+  charArr = ["a", "b", "c", "d", "e"];
+  return charArr.length;
+}
+
+console.log(unusualFive());
