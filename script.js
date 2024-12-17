@@ -1853,4 +1853,27 @@ function doubleChar(str) {
     .join("");
 }
 
-console.log(doubleChar("abcd"));
+/*
+Kata 72
+Find the capitals
+
+Description:
+Instructions
+Write a function that takes a single non-empty string of only lowercase and uppercase ascii letters (word) as its argument, and returns an ordered list containing the indices of all capital (uppercase) letters in the string.
+
+Example (Input --> Output)
+"CodEWaRs" --> [0,3,4,6]
+
+Url: https://www.codewars.com/kata/539ee3b6757843632d00026b
+*/
+
+var capitals = function (word) {
+  const test = word.split("");
+  let arr = [];
+  for (let i = 0; i < test.length; i++) {
+    if (test[i] === test[i].toUpperCase()) arr.push(i);
+  }
+  return arr;
+};
+
+console.log(capitals("CodEWaRs"));
