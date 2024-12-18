@@ -1876,4 +1876,48 @@ var capitals = function (word) {
   return arr;
 };
 
-console.log(capitals("CodEWaRs"));
+/*
+Kata 73
+A Needle in the Haystack
+
+Description:
+Can you find the needle in the haystack?
+
+Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+After your function finds the needle it should return a message (as a string) that says:
+
+"found the needle at position " plus the index it found the needle, so:
+
+Example(Input --> Output)
+
+["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5" 
+Note: In COBOL, it should return "found the needle at position 6"
+
+Url: https://www.codewars.com/kata/56676e8fabd2d1ff3000000c
+*/
+
+function findNeedle(haystack) {
+  let num;
+  for (let i = 0; i < haystack.length; i++) {
+    if (haystack[i] === "needle") {
+      num = i;
+    }
+  }
+  return `found the needle at position ${num}`;
+}
+
+console.log(
+  findNeedle([
+    "3",
+    "123124234",
+    undefined,
+    "needle",
+    "world",
+    "hay",
+    2,
+    "3",
+    true,
+    false,
+  ])
+);
