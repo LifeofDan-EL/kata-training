@@ -1907,21 +1907,6 @@ function findNeedle(haystack) {
   return `found the needle at position ${num}`;
 }
 
-console.log(
-  findNeedle([
-    "3",
-    "123124234",
-    undefined,
-    "needle",
-    "world",
-    "hay",
-    2,
-    "3",
-    true,
-    false,
-  ])
-);
-
 /*
 Kata 74
 Find Maximum and Minimum Values of a List
@@ -1949,5 +1934,61 @@ var max = function (list) {
   return Math.max(...list);
 };
 
-console.log(min([-52, 56, 30, 29, -54, 0, -110]));
-console.log(max([-52, 56, 30, 29, -54, 0, -110]));
+/*
+Kata 75
+Switch it Up!
+
+Description:
+When provided with a number between 0-9, return it in words. Note that the input is guaranteed to be within the range of 0-9.
+
+Input: 1
+
+Output: "One".
+
+If your language supports it, try using a switch statement.
+
+Url: https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/
+*/
+
+function switchItUp(number) {
+  switch (number) {
+    case 0:
+      return "Zero";
+    case 1:
+      return "One";
+    case 2:
+      return "Two";
+    case 3:
+      return "Three";
+    case 4:
+      return "Four";
+    case 5:
+      return "Five";
+    case 6:
+      return "Six";
+    case 7:
+      return "Seven";
+    case 8:
+      return "Eight";
+    case 9:
+      return "Nine";
+  }
+}
+
+/*
+Kata 76
+Is he gonna survive?
+
+Description:
+A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+Return true if yes, false otherwise :)
+
+Url: https://www.codewars.com/kata/59ca8246d751df55cc00014c
+*/
+
+function hero(bullets, dragons) {
+  return bullets >= dragons * 2;
+}
+
+console.log(hero(10, 5));
