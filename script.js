@@ -2164,4 +2164,35 @@ function getGrade(s1, s2, s3) {
     : "F";
 }
 
-console.log(getGrade(95, 90, 93));
+/*
+Kata 84
+Replace With Alphabet Position
+
+Description:
+In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+If anything in the text isn't a letter, ignore it and don't return it.
+
+"a" = 1, "b" = 2, etc.
+
+Example
+Input = "The sunset sets at twelve o' clock."
+Output = "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+
+Url: https://www.codewars.com/kata/546f922b54af40e1e90001da/
+*/
+
+function alphabetPosition(text) {
+  let alphabetArr = "abcdefghijklmnopqrstuvwxyz".split("");
+  let str = "";
+
+  let test = text.toLowerCase().split("");
+  let test2 = test.filter((x) => alphabetArr.includes(x));
+
+  for (let i = 0; i < test2.length; i++) {
+    str += `${alphabetArr.indexOf(`${test2[i]}`) + 1} `;
+  }
+  return `${str.trim()}`;
+}
+
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
