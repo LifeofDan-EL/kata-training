@@ -2195,8 +2195,6 @@ function alphabetPosition(text) {
   return `${str.trim()}`;
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
-
 /*
 Kata 85
 Beginner Series #4 Cockroach
@@ -2215,3 +2213,31 @@ Url: https://www.codewars.com/kata/55fab1ffda3e2e44f00000c6
 function cockroachSpeed(s) {
   return Math.floor(s * 27.778);
 }
+
+/*
+Kata 86
+Anagram Detection
+
+Description:
+An anagram is the result of rearranging the letters of a word to produce a new word (see wikipedia).
+
+Note: anagrams are case insensitive
+
+Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+
+Examples
+"foefet" is an anagram of "toffee"
+
+"Buckethead" is an anagram of "DeathCubeK"
+
+Url: https://www.codewars.com/kata/529eef7a9194e0cbc1000255
+*/
+
+var isAnagram = function (test, original) {
+  return (
+    test.toLowerCase().split("").sort().join("") ===
+    original.toLowerCase().split("").sort().join("")
+  );
+};
+
+console.log(isAnagram("foefet", "toffee"));
