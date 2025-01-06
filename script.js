@@ -2283,4 +2283,18 @@ function mango(quantity, price) {
   return (quantity - Math.floor(quantity / 3)) * price;
 }
 
-console.log(mango(2, 3));
+/*
+Kata 88
+Super Duper Easy
+
+Description:
+Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+Url: https://www.codewars.com/kata/55a5bfaa756cfede78000026
+*/
+
+function problem(x) {
+  return typeof x === "number" ? x * 50 + 6 : "Error";
+}
+
+console.log(problem(1));
